@@ -161,7 +161,7 @@ header{
   top: auto;
 }
 .presentation-wave.back{
-  background: url("/assets/images/wave-back.svg");
+  background: url("assets/images/wave-back.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 99.5%;
@@ -173,7 +173,7 @@ header{
 
 }
 .presentation-wave.front{
-  background: url("/assets/images/wave-front.svg");
+  background: url("assets/images/wave-front.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
