@@ -1,0 +1,212 @@
+html,body{
+  padding: 0;
+  margin: 0;
+  overflow-x:hidden;
+}
+
+.hide{
+  display: none;
+}
+.hide2{
+  visibility: hidden;
+}
+.hide3{
+  opacity: 0;
+}
+/*
+HEADER & MENU-HEADER
+*/
+header{
+  height: 52px;
+  display: flex;
+  justify-content:center;
+  width: 100%;
+  position: absolute;
+}
+.menu-header{
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  /* text-shadow: 0px 0px 1px #0000008f; */
+  font-weight: bold;
+  list-style: none;
+  display: flex;
+  z-index: 5;
+
+}
+.menu-header>li{
+  padding:0 16px;
+}
+.menu-header>li:hover{
+  opacity: 0.9;
+}
+.menu-header>li>a{
+  text-decoration: none;
+  color: white;
+}
+.menu-header>li>a:active{
+  color: white;
+}
+
+/*
+ CONTENT-SECTION
+*/
+.content-section{
+  height: calc(100vh - 52px);
+}
+
+/*
+  Presentation & SkY & Elements
+*/
+
+@keyframes wave-back {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  75% {
+    transform: translateX(0);
+  }
+
+}
+@keyframes wave-front {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  75% {
+    transform: translateX(0);
+  }
+
+}
+@keyframes boat {
+  0% {
+    transform: translate(0%,0%) ;
+  }
+  25% {
+    transform: translate(-10%,-2%) ;
+  }
+  50% {
+    transform: translate(-20%,-2%) ;
+  }
+  75% {
+    transform: translate(0%,0%) ;
+  }
+
+}
+.presentation{
+  height: 100%;
+  position: relative;
+  background: #282830;
+}
+.presentation-sky{
+  background:#2196F3;
+  height: 95%;
+  transition: all 0.5s;
+}
+.presentation-sun{
+  position: absolute;
+  z-index: 1;
+  height: 20%;
+  top: 7%;
+  right: 5%;
+  transition: all 1s;
+}
+.presentation-sun>object{
+  height: 100%;
+}
+.presentation-cloud{
+  position: absolute;
+  z-index: 2;
+  height: 10%;
+  transition: all 1s;
+}
+.presentation-cloud.left{
+  top: 31%;
+  right: 35%;
+}
+.presentation-cloud.right{
+  top: 18%;
+  right: 7%;
+}
+.presentation-cloud>object{
+  height: 100%;
+}
+.presentation-waves{
+  position: absolute;
+  top:auto;
+  width: 100%;
+  bottom: 0;
+}
+.presentation-wave{
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top:0;
+  left: -15%;
+}
+.presentation-wave-reference{
+  opacity: 0;
+  width: 130%;
+  top: 0;
+}
+.presentation-wave.assist{
+  background: #282830;
+  z-index: 3;
+  height: 15%;
+  bottom: 0;
+  top: auto;
+}
+.presentation-wave.back{
+  background: url("/assets/images/wave-back.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 99.5%;
+  z-index: 1;
+  animation-name: wave-back;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  will-change: transform;
+
+}
+.presentation-wave.front{
+  background: url("/assets/images/wave-front.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  z-index: 3;
+  animation-name: wave-front;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  will-change: transform;
+
+}
+.presentation-boat{
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+}
+.presentation-boat>object{
+  height: 80%;
+  margin-left: 60%;
+  margin-top:-6%;
+  animation-name: boat;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+/*
+  ABOUT Section
+*/
+.about-section{
+  background: #282830;
+  width: 100%;
+  height: 100%;
+}
